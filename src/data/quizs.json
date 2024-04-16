@@ -1,0 +1,388 @@
+[
+    {
+        "question": "What is the output of the following Java code snippet?\n`java\nint x = 5;\nSystem.out.println(++x); // Pre-increment\n`",
+        "options": [
+          "4",
+          "5",
+          "6",
+          "Compilation error"
+        ],
+        "correctAnswer": 2, 
+        "explanation": "Pre-increment operator (++x) increments the value of x by 1 and then prints it. So, the output will be 6."
+      },
+      {
+        "question": "Which data structure in Java is most efficient for searching sorted elements?",
+        "options": [
+          "Array",
+          "Linked List",
+          "HashMap",
+          "BinaryTree"
+        ],
+        "correctAnswer": 0, 
+        "explanation": "Arrays allow binary search, which has a time complexity of O(log n) for searching sorted elements, making it the most efficient option."
+      },
+      {
+        "question": "What's the time complexity of the bubble sort algorithm in the worst case?",
+        "options": [
+          "O(n)",
+          "O(n log n)",
+          "O(n^2)", 
+          "O(log n)"
+        ],
+        "correctAnswer": 2, 
+        "explanation": "Bubble sort involves multiple passes through the data, comparing adjacent elements and swapping them if necessary. In the worst case (already sorted data in descending order), it requires n-1 comparisons for each pass, leading to a total complexity of O(n^2)."
+      },
+      {
+        "question": "How can you convert a primitive data type (e.g., int) to its corresponding wrapper class (e.g., Integer) in Java?",
+        "options": [
+          "Direct assignment (int i = Integer.valueOf(5))",
+          "Casting (Integer i = (Integer) 5)",
+          "Autoboxing (Integer i = 5)",
+          "None of the above"
+        ],
+        "correctAnswer": 2, 
+        "explanation": "Autoboxing is a feature in Java that automatically converts primitive data types to their corresponding wrapper classes when assigning to wrapper class variables. So, Integer i = 5 is a valid way to achieve conversion."
+      },
+      {
+        "question": "What is the difference between primitive data types and reference data types in Java?",
+        "options": [
+          "Primitive data types store references to objects, while reference data types hold actual data values.",
+          "Primitive data types are basic data types like int and String, while reference data types are objects created using the `new` keyword.",
+          "There is no difference; all data types in Java behave the same.",
+          "Primitive data types are stored on the heap, while reference data types are stored on the stack."
+        ],
+        "correctAnswer": 1, 
+        "explanation": "Primitive data types are basic data types that hold their own values (e.g., int, String). Reference data types are objects created using `new` and store references to memory locations where the actual data resides. (Option 2)"
+      },
+      {
+        "question": "What is the time complexity of a linear search algorithm?",
+        "options": [
+          "O(1)",
+          "O(log n)",
+          "O(n)",
+          "O(n^2)"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Linear search iterates through the entire data structure in the worst case, resulting in O(n) time complexity. (Option 3)"
+      },
+      {
+        "question": "What is the purpose of a hash table data structure?",
+        "options": [
+          "To store data in a sorted order for efficient retrieval.",
+          "To efficiently store and retrieve key-value pairs.",
+          "To represent hierarchical relationships between data items.",
+          "To efficiently search for elements based on their index."
+        ],
+        "correctAnswer": 1,
+        "explanation": "Hash tables allow for fast retrieval of data based on a key by using a hashing function. (Option 2)"
+      },
+      {
+        "question": "Which sorting algorithm is generally considered the most efficient for large datasets?",
+        "options": [
+          "Selection Sort",
+          "Bubble Sort",
+          "Merge Sort",
+          "Insertion Sort"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Merge Sort has a time complexity of O(n log n) and is efficient for large datasets due to its divide-and-conquer approach. (Option 3)"
+      },
+      {
+        "question": "What is the difference between a public, private, and protected access modifier in Java?",
+        "options": [
+          "Public: accessible from anywhere, Private: accessible only within the class, Protected: accessible within the class and subclasses.",
+          "Public: accessible only within the class, Private: accessible from anywhere, Protected: accessible within the package.",
+          "Public: accessible within the class and subclasses, Private: accessible only within the package, Protected: accessible from anywhere.",
+          "There is no difference; all access modifiers have the same effect."
+        ],
+        "correctAnswer": 0,
+        "explanation": "Public, private, and protected access modifiers control the visibility of class members. "
+      },
+        {
+          "question": "Explain the concept of garbage collection in Java and how it works.",
+          "options": [
+            "Garbage collection automatically deallocates memory for unused objects to prevent memory leaks.",
+            "Programmers are responsible for manually freeing memory using `delete` or similar methods.",
+            "Java uses a reference counting system to track object usage and reclaim memory.",
+            "Garbage collection is disabled by default; memory management needs to be handled explicitly."
+          ],
+          "correctAnswer": 0,
+          "explanation": "Java relies on garbage collection to automatically manage memory. It identifies unused objects based on reachability analysis and reclaims the memory they occupy. "
+        },
+        {
+          "question": "Describe the differences between concurrency and parallelism in Java and how they can be achieved using threads and thread pools.",
+          "options": [
+            "Concurrency refers to handling multiple tasks simultaneously, while parallelism executes tasks truly in parallel on multiple processors.",
+            "There is no real distinction; concurrency and parallelism achieve the same outcome.",
+            "Concurrency focuses on managing multiple tasks that may or may not run on separate processors, while parallelism requires multi-core CPUs for true parallel execution.",
+            "Threads are for concurrency only, while thread pools manage parallelism."
+          ],
+          "correctAnswer": 2,
+          "explanation": "Concurrency allows handling multiple tasks that appear to run simultaneously, even if on a single core. Parallelism executes tasks truly in parallel on multiple CPUs using threads and synchronization mechanisms. (Option 2)"
+        },
+        {
+          "question": "Discuss the trade-offs between using synchronized methods and locks (like ReentrantLock) for thread synchronization in Java.",
+          "options": [
+            "Synchronized methods are simpler but may lead to performance overhead, while locks offer more flexibility but require manual management.",
+            "Locks are always preferred for performance reasons, while synchronized methods are for basic synchronization needs.",
+            "There is no significant difference; both methods achieve the same level of synchronization.",
+            "Synchronized methods are thread-safe, while locks require additional synchronization logic around them."
+          ],
+          "correctAnswer": 0,
+          "explanation": "Synchronized methods offer a simpler approach but may cause unnecessary locking. Locks allow for finer-grained control but require careful management to avoid deadlocks. "
+        },
+        {
+          "question": "Explain the working principle of a self-balancing binary search tree (e.g., AVL tree) in Java and its advantages over a standard BST.",
+          "options": [
+            "Self-balancing trees automatically maintain a balanced height difference between subtrees for efficient search and insertion.",
+            "Standard BSTs are always more efficient than self-balancing trees due to their simpler structure.",
+            "Self-balancing trees offer faster deletion operations compared to standard BSTs.",
+            "The choice between self-balancing trees and standard BSTs depends on the frequency of insert/delete operations vs. search operations."
+          ],
+          "correctAnswer": 0,
+          "explanation": "Self-balancing trees (e.g., AVL tree) perform operations like insertion and deletion while ensuring a balanced structure, leading to faster average search and insertion times compared to a standard BST that can become unbalanced. "
+        },
+        {
+            "question": "Describe the concept of memoization and how it can be used to optimize dynamic programming solutions in Java, including potential trade-offs and considerations.",
+            "options": [
+              "Memoization stores the results of function calls with specific arguments to avoid redundant calculations.",
+              "It is particularly beneficial for problems with overlapping subproblems that can be solved recursively.",
+              "While it improves efficiency, memoization can increase memory usage for storing cached results.",
+              "All of the above statements are true. (Option 3)"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Memoization stores previously computed results for function calls, improving efficiency for problems with overlapping subproblems. However, it can increase memory usage for storing cached results. (Option 3)"
+          },
+          {
+            "question": "Explain the concept of concurrent programming patterns like the producer-consumer pattern and how they can be implemented using threads and queues in Java for efficient data processing.",
+            "options": [
+              "The producer-consumer pattern involves separate threads for producing data and consuming it from a shared buffer (queue).",
+              "Synchronization mechanisms are crucial to ensure safe access to the shared buffer and avoid race conditions.",
+              "Producer-consumer patterns are ideal for scenarios where data production and consumption rates might differ.",
+              "All of the above statements are true. (Option 3)"
+            ],
+            "correctAnswer": 3,
+            "explanation": "The producer-consumer pattern uses separate threads for producing and consuming data from a shared buffer. Synchronization is essential to avoid race conditions. This pattern is efficient for tasks with varying production and consumption rates. (Option 3)"
+          },
+          {
+            "question": "Discuss the advantages and limitations of using reflection in Java. When might reflection be appropriate, and what are the potential security implications?",
+            "options": [
+              "Reflection allows accessing class members and invoking methods dynamically at runtime, providing flexibility.",
+              "However, it bypasses type safety checks and can lead to runtime exceptions if methods or fields don't exist.",
+              "Reflection should be used cautiously, as it can make code harder to understand and maintain.",
+              "All of the above statements are true. (Option 3)"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Reflection offers dynamic access to class members but bypasses type safety, potentially causing runtime errors. Use it cautiously due to reduced code maintainability and potential security implications. (Option 3)"
+          },
+          {
+            "question": "Describe various garbage collection algorithms used in Java (e.g., mark-and-sweep, copying) and their trade-offs in terms of performance and memory usage.",
+            "options": [
+              "Mark-and-sweep identifies unreachable objects, marks them, and then sweeps the memory to reclaim them.",
+              "Copying garbage collection creates a new memory space and copies live objects there, leaving the old space for garbage collection.",
+              "The choice of algorithm depends on factors like application memory usage patterns and desired performance characteristics.",
+              "All of the above statements are true. (Option 3)"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Java uses different garbage collection algorithms (e.g., mark-and-sweep, copying) with trade-offs in performance and memory usage. The choice depends on the application's specific needs. (Option 3)"
+          },
+          {
+            "question": "Explain advanced Java concurrency concepts like thread pools, executors, and fork/join framework, their functionalities, and when they might be preferable over raw threads.",
+            "options": [
+              "Thread pools manage a pool of reusable threads to avoid constant thread creation and improve performance.",
+              "Executors provide a higher-level abstraction for managing thread execution and scheduling tasks.",
+              "The fork/join framework is suitable for parallelizing tasks with a divide-and-conquer approach on multi-core systems.",
+              "All of the above statements are true. (Option 3)"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Thread pools, executors, and fork/join frameworks offer abstractions over raw threads, improving performance, managing resources, and enabling parallel execution of tasks. (Option 3)"
+          },
+          {
+            "question": "Explain advanced Java concurrency concepts like thread pools, executors, and fork/join framework, their functionalities, and when they might be preferable over raw threads.",
+            "options": [
+              "Thread pools manage a pool of reusable threads to avoid constant thread creation and improve performance.",
+              "Executors provide a higher-level abstraction for managing thread execution and scheduling tasks.",
+              "The fork/join framework is suitable for parallelizing tasks with a divide-and-conquer approach on multi-core systems.",
+              "All of the above statements are true. (Option 3)"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Thread pools, executors, and fork/join frameworks offer abstractions over raw threads, improving performance, managing resources, and enabling parallel execution of tasks. (Option 3)"
+          },
+          {
+            "question": "What are the four main principles of Object-Oriented Programming (OOP)?",
+            "options": [
+              "Encapsulation, Inheritance, Polymorphism, Abstraction",
+              "Functions, Variables, Loops, Conditions",
+              "Java, Python, C++, JavaScript",
+              "None of the above. "
+            ],
+            "correctAnswer": 1,
+            "explanation": "The four main principles of OOP are Encapsulation, Inheritance, Polymorphism, and Abstraction. "
+          },
+          {
+            "question": "Which of the following operations can be performed on a Binary Search Tree (BST)?",
+            "options": [
+              "Insertion, Deletion, Search",
+              "Sorting, Hashing, Indexing",
+              "Looping, Recursion, Iteration",
+              "None of the above. "
+            ],
+            "correctAnswer": 1,
+            "explanation": "BST supports operations like Insertion, Deletion, and Search efficiently. "
+          },
+          {
+            "question": "What is the purpose of Java Streams API?",
+            "options": [
+              "To process collections of objects in a functional programming style.",
+              "To create graphical user interfaces (GUIs) in Java applications.",
+              "To handle network communication and socket programming.",
+              "None of the above. "
+            ],
+            "correctAnswer": 1,
+            "explanation": "Java Streams API allows processing collections of objects in a functional programming manner. "
+          },
+          {
+            "question": "What are the key concepts in Dynamic Programming (DP)?",
+            "options": [
+              "Memoization, Tabulation, Optimal Substructure, Overlapping Subproblems",
+              "Branching, Looping, Recursion, Iteration",
+              "Polymorphism, Encapsulation, Inheritance, Abstraction",
+              "None of the above. "
+            ],
+            "correctAnswer": 1,
+            "explanation": "DP involves concepts like Memoization, Tabulation, Optimal Substructure, and Overlapping Subproblems. "
+          },
+          {
+            "question": "What is the purpose of Java Generics?",
+            "options": [
+              "To provide type-safety and reusability in code by allowing the use of generic types.",
+              "To handle exceptions and errors in Java applications.",
+              "To create user-defined data structures like stacks and queues.",
+              "None of the above. "
+            ],
+            "correctAnswer": 1,
+            "explanation": "Java Generics enable type-safety and reusability through generic types. "
+          },
+          {
+            "question": "Which sorting algorithm has the best average-case time complexity among Bubble Sort, Selection Sort, and Insertion Sort?",
+            "options": [
+              "Insertion Sort",
+              "Bubble Sort",
+              "Selection Sort",
+              "None of the above. "
+            ],
+            "correctAnswer": 1,
+            "explanation": "Insertion Sort typically performs better than Bubble Sort and Selection Sort in average-case scenarios. "
+          },
+          {
+            "question": "How does Java handle memory management?",
+            "options": [
+              "Through automatic garbage collection to reclaim unused memory.",
+              "By manually allocating and deallocating memory using malloc and free functions.",
+              "By creating memory pools for efficient memory allocation.",
+              "None of the above. "
+            ],
+            "correctAnswer": 1,
+            "explanation": "Java employs automatic garbage collection to manage memory and free up unused resources. "
+          },
+          {
+            "question": "How does Java handle memory management?",
+            "options": [
+              "Through automatic garbage collection to reclaim unused memory.",
+              "By manually allocating and deallocating memory using malloc and free functions.",
+              "By creating memory pools for efficient memory allocation.",
+              "None of the above. "
+            ],
+            "correctAnswer": 1,
+            "explanation": "Java employs automatic garbage collection to manage memory and free up unused resources. "
+          },
+          {
+            "question": "What is the purpose of Java's exception handling mechanism?",
+            "options": [
+              "To handle runtime errors and exceptional conditions gracefully.",
+              "To improve code readability and maintainability.",
+              "To replace traditional if-else statements for error checks.",
+              "None of the above. "
+            ],
+            "correctAnswer": 1,
+            "explanation": "Java's exception handling helps manage runtime errors and exceptional conditions in a structured manner. "
+          },
+          {
+            "question": "Explain the types of Java garbage collection algorithms and their characteristics.",
+            "options": [
+              "Serial, Parallel, Concurrent Mark-Sweep (CMS), Garbage-First (G1)",
+              "FIFO, LIFO, Priority, Round Robin",
+              "Insertion, Selection, Bubble, Merge",
+              "None of the above. "
+            ],
+            "correctAnswer": 1,
+            "explanation": "Java garbage collection algorithms include Serial, Parallel, CMS, and G1, each with unique characteristics. "
+          },
+          {
+            "question": "Which data structure is suitable for implementing a priority queue efficiently?",
+            "options": [
+              "Heap",
+              "Stack",
+              "Queue",
+              "None of the above. "
+            ],
+            "correctAnswer": 1,
+            "explanation": "A heap data structure is commonly used for implementing a priority queue due to its efficient insertion and deletion of elements. "
+          },
+          {
+            "question": "Which algorithm is commonly used for finding the shortest path in weighted graphs?",
+            "options": [
+              "Dijkstra's algorithm",
+              "Breadth-First Search (BFS)",
+              "Depth-First Search (DFS)",
+              "None of the above. "
+            ],
+            "correctAnswer": 1,
+            "explanation": "Dijkstra's algorithm is widely used for finding the shortest path in weighted graphs based on edge weights. "
+          },
+          {
+            "question": "Explain the Java Memory Model (JMM) and its role in multi-threaded programming.",
+            "options": [
+              "JMM defines how Java threads interact with memory, ensuring memory consistency and visibility in concurrent environments.",
+              "JMM manages heap memory allocation and garbage collection processes.",
+              "JMM handles network communication and socket programming.",
+              "None of the above. "
+            ],
+            "correctAnswer": 1,
+            "explanation": "JMM governs how Java threads access and modify shared memory, maintaining consistency and visibility for multi-threaded applications. "
+          },
+          {
+            "question": "Which traversal algorithm is suitable for sorting elements in a Binary Search Tree (BST)?",
+            "options": [
+              "Inorder traversal",
+              "Preorder traversal",
+              "Postorder traversal",
+              "None of the above. "
+            ],
+            "correctAnswer": 1,
+            "explanation": "Inorder traversal of a BST yields elements in sorted order, making it suitable for sorting operations. "
+          },
+          {
+            "question": "What are the main components of the Java Collections Framework?",
+            "options": [
+              "Interfaces, Implementations, Algorithms",
+              "Classes, Objects, Methods",
+              "Arrays, Lists, Sets",
+              "None of the above. "
+            ],
+            "correctAnswer": 1,
+            "explanation": "The Java Collections Framework consists of interfaces, implementations, and algorithms for managing collections of objects. "
+          }
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+           
+  
+]
